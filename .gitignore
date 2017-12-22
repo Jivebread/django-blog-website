@@ -1,2 +1,7 @@
-mysite/settings.py
+
 mysite/settings.pyc
+# Text backup files
+*.bak
+
+#Database
+*.sqlite3
