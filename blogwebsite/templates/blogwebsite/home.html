@@ -1,5 +1,18 @@
 {% extends "blogwebsite/header.html" %}
-
 {% block content %}
-<p>Hey,</p> 
+	<!-- Page Header -->
+    {% load staticfiles %}
+    <header class="masthead" style="background-image: url({% static '/img/about-bg.jpg' %})">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Sichang (Simon) Park</h1>
+              <span class="subheading">Problem Solver, Clean Solution Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 {% endblock %}

@@ -2,65 +2,91 @@
 <html lang="en">
 
 <head>
-	<title>Sichang</title>
+
+	<title>Team Simon</title>
 	<meta charset="utf-8" />
-	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'blogwebsite/css/bootstrap.min.css' %}" type = "text/css"/>
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
-	
-	<style type="text/css">
-		html,
-		body {
-		  height:100%
-		}
-	</style>
-</head>
+    {% load staticfiles %}
+    <link rel='stylesheet' href={% static 'blogwebsite/css/bootstrap.min.css' %}>
+	  
+    <link href={% static 'website/css/bootstrap.min.css' %} rel="stylesheet">
 
+    
+    <link href={% static '/blogwebsite/bootstrap/css/font-awesome.min.css' %} rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    <link href={% static 'blogwebsite/css/clean-blog.min.css' %} rel="stylesheet">
+
+   
 <body class="body" style="background-color:#f6f6f6">
-	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row">
-			  <div class="col-sm-2">
-				  <br>
-				  <center>
-					<img src="{% static 'blogwebsite/img/profile.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
-				  </center>
-			  </div>
-			  <div class="col-sm-10">
-				  <br>
-				  <center>
-				  <h3>Programming, Teaching, Entrepreneurship</h3>
-				  </center>
-			  </div>
-		</div><hr>
-
-		<div class="row">
-		  <div class="col-sm-2">
-		  <br>
-
-		  <br>
-			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-			  <ul class="nav nav-pills nav-stacked">
-				<li><a href='/'>Home</a></li>
-				<li><a href='/blog/'>Blog</a></li>
-				<li><a href='/contact/'>Contact</a></li>
-			  </ul>
-			</div> 
-		  </div> <!--col-sm-2-->
-		  <div class="col-sm-10">
-		  
-			<div class='container-fluid'>
-			<br><br>
-			   {% block content %}
-			   {% endblock %}	
-			</div>
-		  </div>
-		</div> 
-	</div>
-	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> 
-		</div>
-	</footer>	
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/">Team Simon</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://medium.com/@sichangpark">Medium</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    {% block content %}
+    {% endblock %}
+   
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/sichang-park-044275111/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://medium.com/@sichangpark">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/Jivebread">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Team Simon 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 	
 </body>
 

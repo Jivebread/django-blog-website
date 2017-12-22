@@ -1,6 +1,42 @@
 {% extends "blogwebsite/header.html" %}
 {% block content %}
+<!-- Page Header -->
+    {% load staticfiles %}
+    <header class="masthead" style="background-image: url({% static '/img/about-bg.jpg' %})">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Projects</h1>
+              <span class="subheading">What I worked on</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 	{% for post in object_list %}
-		<h5>{{post.date|date:"Y-m-d"}}<a href="/blog/{{post.id}}">{{post.title}}</a></h5>
+
+	<!-- Page Header -->
+		<div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <a href="/blog/{{post.id}}">
+              <h2 class="post-title">
+                -{{post.title}}-
+              </h2>
+            </a>
+            <p class="post-meta">Posted On
+              {{post.date|date:"Y-m-d"}}</p>
+          </div>
+          <!-- Pager -->
+          
+        </div>
+      </div>
+    </div>
 	{% endfor%}
+	<div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div>
 {% endblock %}
