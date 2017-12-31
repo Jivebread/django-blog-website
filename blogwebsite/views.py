@@ -7,3 +7,5 @@ def index(request):
 	return render(request,'blogwebsite/home.html')
 def contact(request):
 	return render(request,'blogwebsite/basic.html')
+def resume(request):
+	return render(request,'blogwebsite/resume.html')
