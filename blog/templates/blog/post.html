@@ -20,15 +20,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            {% for body in post.body %}
-              <!-- {% if body is 'priority' %}
-                <p>('Priority: ' + str(data[key])</p>
-              {% endif %} -->
             <p>{{post.body|safe|linebreaks}}</p>
-            {% endfor %}
-            <a href="#">
-              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
-            </a>
+        
             <span class="caption text-muted"></span>
 
             <p></p>
